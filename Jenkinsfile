@@ -22,6 +22,8 @@ node('master') {
     }
 
     stage('Test') {
-        echo 'Test our app'
+        withMaven(maven: 'maven') {
+            
+        }
     }
 }
