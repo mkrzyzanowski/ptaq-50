@@ -1,6 +1,7 @@
 package org.ptaq.bobcat;
 
 import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.not;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -30,6 +31,6 @@ public class PtaqTest {
 
     githubRepos.searchForRepo("ptaq");
 
-    Assert.assertThat(githubRepos.getResultsMessage(), containsString("1"));
+    Assert.assertThat(githubRepos.getResultsMessage(), not(containsString("0")));
   }
 }
