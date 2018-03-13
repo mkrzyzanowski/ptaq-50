@@ -23,7 +23,7 @@ node('master') {
 
     stage('Test') {
         withMaven(maven: 'maven') {
-            
+            sh 'mvn clean test -Dwebdriver.type=remote -Dwebdriver.url=http://192.168.99.100:4444/wd/hub -Dwebdriver.cap.browserName=chrome'
         }
     }
 }
